@@ -58,7 +58,7 @@ import FunkinLua;
 import DialogueBoxPsych;
 import Shaders;
 #if android
-import ui.Mobilecontrols;
+import ui.Hitbox;
 #end
 
 #if sys
