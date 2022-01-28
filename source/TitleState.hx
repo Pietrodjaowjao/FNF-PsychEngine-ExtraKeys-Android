@@ -406,6 +406,10 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+                #if android
+		FlxG.android.preventDefaultKeys = [BACK];
+		#end
+
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
 		// FlxG.watch.addQuick('amp', FlxG.sound.music.amplitude);
