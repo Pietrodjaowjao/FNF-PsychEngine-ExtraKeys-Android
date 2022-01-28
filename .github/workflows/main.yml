@@ -68,7 +68,7 @@ jobs:
           haxelib git faxe https://github.com/uhrobots/faxe --quiet
           haxelib git polymod https://github.com/MasterEric/polymod.git --quiet
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc --quiet
-          haxelib git linc_luajit https://github.com/Danninoicent/linc_luajit.git --quiet
+          haxelib git linc_luajit https://github.com/Sirox228/linc_luajit --quiet
           haxelib git AndroidTools https://github.com/Sirox228/AndroidTools.git --quiet
           haxelib git extension-webm https://github.com/Sirox228/extension-webm.git --quiet      
           haxelib list
