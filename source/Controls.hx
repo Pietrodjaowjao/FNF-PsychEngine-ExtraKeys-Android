@@ -10,6 +10,12 @@ import flixel.input.actions.FlxActionSet;
 import flixel.input.gamepad.FlxGamepadButton;
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.keyboard.FlxKey;
+#if android
+import flixel.group.FlxGroup;
+import ui.Hitbox;
+import ui.FlxVirtualPad;
+import flixel.ui.FlxButton;
+#end
 
 #if (haxe >= "4.0.0")
 enum abstract Action(String) to String from String
@@ -95,6 +101,7 @@ enum Control
 	UI_LEFT;
 	UI_RIGHT;
 	UI_DOWN;
+	NOTE_ONE1;
 	NOTE_UP;
 	NOTE_LEFT;
 	NOTE_RIGHT;
@@ -133,6 +140,7 @@ class Controls extends FlxActionSet
 	var _ui_leftR = new FlxActionDigital(Action.UI_LEFT_R);
 	var _ui_rightR = new FlxActionDigital(Action.UI_RIGHT_R);
 	var _ui_downR = new FlxActionDigital(Action.UI_DOWN_R);
+	var _note_one1 = new FlxActionDigital(Action.NOTE_ONE1);
 	var _note_up = new FlxActionDigital(Action.NOTE_UP);
 	var _note_left = new FlxActionDigital(Action.NOTE_LEFT);
 	var _note_right = new FlxActionDigital(Action.NOTE_RIGHT);
@@ -229,6 +237,11 @@ class Controls extends FlxActionSet
 	inline function get_NOTE_LEFT()
 		return _note_left.check();
 
+	public var NOTE_ONE1(get, never):Bool;
+
+	inline function get_NOTE_ONE1()
+		return _note_one1.check();
+
 	public var NOTE_RIGHT(get, never):Bool;
 
 	inline function get_NOTE_RIGHT()
@@ -301,7 +314,7 @@ class Controls extends FlxActionSet
 
 	
 	#if (haxe >= "4.0.0")
-	public function new(name, scheme = None)
+public function new(name, scheme = None)
 	{
 		super(name);
 
@@ -317,6 +330,7 @@ class Controls extends FlxActionSet
 		add(_ui_leftR);
 		add(_ui_rightR);
 		add(_ui_downR);
+		add(_note_one1);
 		add(_note_up);
 		add(_note_left);
 		add(_note_right);
@@ -352,6 +366,69 @@ class Controls extends FlxActionSet
 		setKeyboardScheme(scheme, false);
 	}
 	#end
+
+	#if android
+	public var trackedinputsUI:Array<FlxActionInput> = [];
+	public var trackedinputsNOTES:Array<FlxActionInput> = [];	
+
+	public function setHitBoxNOTES(hitbox:Hitbox) 
+switch(Type){
+	case ONE:
+		inline forEachBound(Control.N4, (action, state) -> addbutton(action, hitbox.k1, state));
+	case TWO:
+		inline forEachBound(Control.LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.RIGHT, (action, state) -> addbutton(action, hitbox.k2, state));
+	case THREE:
+		inline forEachBound(Control.LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.N4, (action, state) -> addbutton(action, hitbox.k2, state));
+		inline forEachBound(Control.RIGHT, (action, state) -> addbutton(action, hitbox.k3, state));					
+	case FIVE:
+		inline forEachBound(Control.UP, (action, state) -> addbutton(action, hitbox.k4, state));
+		inline forEachBound(Control.DOWN, (action, state) -> addbutton(action, hitbox.k2, state));
+		inline forEachBound(Control.N4, (action, state) -> addbutton(action, hitbox.k3, state));
+		inline forEachBound(Control.LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.RIGHT, (action, state) -> addbutton(action, hitbox.k5, state));
+	case SIX:
+		inline forEachBound(Control.L1, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.U1, (action, state) -> addbutton(action, hitbox.k2, state));
+		inline forEachBound(Control.R1, (action, state) -> addbutton(action, hitbox.k3, state));
+		inline forEachBound(Control.L2, (action, state) -> addbutton(action, hitbox.k4, state));
+		inline forEachBound(Control.D1, (action, state) -> addbutton(action, hitbox.k5, state));
+		inline forEachBound(Control.R2, (action, state) -> addbutton(action, hitbox.k6, state));									
+	case SEVEN:	
+		inline forEachBound(Control.L1, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.U1, (action, state) -> addbutton(action, hitbox.k2, state));
+		inline forEachBound(Control.R1, (action, state) -> addbutton(action, hitbox.k3, state));
+		inline forEachBound(Control.N4, (action, state) -> addbutton(action, hitbox.k4, state));
+		inline forEachBound(Control.L2, (action, state) -> addbutton(action, hitbox.k5, state));
+		inline forEachBound(Control.D1, (action, state) -> addbutton(action, hitbox.k6, state));
+		inline forEachBound(Control.R2, (action, state) -> addbutton(action, hitbox.k7, state));
+	case EIGHT:
+		inline forEachBound(Control.N0, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.N1, (action, state) -> addbutton(action, hitbox.k2, state));
+		inline forEachBound(Control.N2, (action, state) -> addbutton(action, hitbox.k3, state));
+		inline forEachBound(Control.N3, (action, state) -> addbutton(action, hitbox.k4, state));
+		inline forEachBound(Control.N5, (action, state) -> addbutton(action, hitbox.k5, state));
+		inline forEachBound(Control.N6, (action, state) -> addbutton(action, hitbox.k6, state));
+		inline forEachBound(Control.N7, (action, state) -> addbutton(action, hitbox.k7, state));
+		inline forEachBound(Control.N8, (action, state) -> addbutton(action, hitbox.k8, state));					
+	case NINE:
+		inline forEachBound(Control.N0, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.N1, (action, state) -> addbutton(action, hitbox.k2, state));
+		inline forEachBound(Control.N2, (action, state) -> addbutton(action, hitbox.k3, state));
+		inline forEachBound(Control.N3, (action, state) -> addbutton(action, hitbox.k4, state));
+		inline forEachBound(Control.N4, (action, state) -> addbutton(action, hitbox.k5, state));
+		inline forEachBound(Control.N5, (action, state) -> addbutton(action, hitbox.k6, state));
+		inline forEachBound(Control.N6, (action, state) -> addbutton(action, hitbox.k7, state));
+		inline forEachBound(Control.N7, (action, state) -> addbutton(action, hitbox.k8, state));
+		inline forEachBound(Control.N8, (action, state) -> addbutton(action, hitbox.k9, state));											
+	case DEFAULT:	
+		inline forEachBound(Control.UP, (action, state) -> addbutton(action, hitbox.k3, state));
+		inline forEachBound(Control.DOWN, (action, state) -> addbutton(action, hitbox.k2, state));
+		inline forEachBound(Control.LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.RIGHT, (action, state) -> addbutton(action, hitbox.k4, state));	
+	}
+	}
 
 	override function update()
 	{
@@ -392,6 +469,7 @@ class Controls extends FlxActionSet
 			case UI_DOWN: _ui_down;
 			case UI_LEFT: _ui_left;
 			case UI_RIGHT: _ui_right;
+			case NOTE_ONE1: _note_one1;
 			case NOTE_UP: _note_up;
 			case NOTE_DOWN: _note_down;
 			case NOTE_LEFT: _note_left;
