@@ -12,10 +12,6 @@ import flixel.addons.display.FlxGridOverlay;
 import flixel.addons.transition.FlxTransitionSprite.GraphicTransTileDiamond;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.addons.transition.TransitionData;
-import flixel.system.scaleModes.BaseScaleMode;
-import flixel.system.scaleModes.FillScaleMode;
-import flixel.system.scaleModes.FixedScaleMode;
-import flixel.system.scaleModes.StageSizeScaleMode;
 import haxe.Json;
 import openfl.display.Bitmap;
 import openfl.display.BitmapData;
@@ -23,7 +19,6 @@ import openfl.display.BitmapData;
 import sys.FileSystem;
 import sys.io.File;
 #end
-import options.GraphicsSettingsSubState;
 //import flixel.graphics.FlxGraphic;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup;
@@ -83,11 +78,15 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
+                #if android
+		FlxG.android.preventDefaultKeys = [BACK];
+		#end
+
 		#if MODS_ALLOWED
 		// Just to load a mod on start up if ya got one. For mods that change the menu music and bg
-		if (FileSystem.exists("modsList.txt")){
+		if (FileSystem.exists(Main.getDataPath() + "modsList.txt")){
 			
-			var list:Array<String> = CoolUtil.listFromString(File.getContent("modsList.txt"));
+			var list:Array<String> = CoolUtil.listFromString(File.getContent(Main.getDataPath() + "modsList.txt"));
 			var foundTheTop = false;
 			for (i in list){
 				var dat = i.split("|");
@@ -100,15 +99,15 @@ class TitleState extends MusicBeatState
 		}
 		#end
 		
-		#if (desktop && MODS_ALLOWED)
-		var path = "mods/" + Paths.currentModDirectory + "/images/gfDanceTitle.json";
+		#if MODS_ALLOWED
+		var path = Main.getDataPath() + "mods/" + Paths.currentModDirectory + "/images/gfDanceTitle.json";
 		//trace(path, FileSystem.exists(path));
 		if (!FileSystem.exists(path)) {
-			path = "mods/images/gfDanceTitle.json";
+			path = Main.getDataPath() + "mods/images/gfDanceTitle.json";
 		}
 		//trace(path, FileSystem.exists(path));
 		if (!FileSystem.exists(path)) {
-			path = "assets/images/gfDanceTitle.json";
+			path = Main.getDataPath() + "assets/images/gfDanceTitle.json";
 		}
 		//trace(path, FileSystem.exists(path));
 		titleJSON = Json.parse(File.getContent(path));
@@ -172,10 +171,7 @@ class TitleState extends MusicBeatState
 		super.create();
 
 		FlxG.save.bind('funkin', 'ninjamuffin99');
-		
 		ClientPrefs.loadPrefs();
-		
-		GraphicsSettingsSubState.onChangeRes();
 
 		Highscore.load();
 
@@ -270,15 +266,15 @@ class TitleState extends MusicBeatState
 		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
 		
 		
-		#if (desktop && MODS_ALLOWED)
-		var path = "mods/" + Paths.currentModDirectory + "/images/logoBumpin.png";
+		#if MODS_ALLOWED
+		var path = Main.getDataPath() + "mods/" + Paths.currentModDirectory + "/images/logoBumpin.png";
 		//trace(path, FileSystem.exists(path));
 		if (!FileSystem.exists(path)){
-			path = "mods/images/logoBumpin.png";
+			path = Main.getDataPath() + "mods/images/logoBumpin.png";
 		}
 		//trace(path, FileSystem.exists(path));
 		if (!FileSystem.exists(path)){
-			path = "assets/images/logoBumpin.png";
+			path = Main.getDataPath() + "assets/images/logoBumpin.png";
 		}
 		//trace(path, FileSystem.exists(path));
 		logoBl.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(path),File.getContent(StringTools.replace(path,".png",".xml")));
@@ -297,15 +293,15 @@ class TitleState extends MusicBeatState
 		swagShader = new ColorSwap();
 			gfDance = new FlxSprite(titleJSON.gfx, titleJSON.gfy);
 		
-		#if (desktop && MODS_ALLOWED)
-		var path = "mods/" + Paths.currentModDirectory + "/images/gfDanceTitle.png";
+		#if MODS_ALLOWED
+		var path = Main.getDataPath() + "mods/" + Paths.currentModDirectory + "/images/gfDanceTitle.png";
 		//trace(path, FileSystem.exists(path));
 		if (!FileSystem.exists(path)){
-			path = "mods/images/gfDanceTitle.png";
+			path = Main.getDataPath() + "mods/images/gfDanceTitle.png";
 		//trace(path, FileSystem.exists(path));
 		}
 		if (!FileSystem.exists(path)){
-			path = "assets/images/gfDanceTitle.png";
+			path = Main.getDataPath() + "assets/images/gfDanceTitle.png";
 		//trace(path, FileSystem.exists(path));
 		}
 		gfDance.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(path),File.getContent(StringTools.replace(path,".png",".xml")));
@@ -323,15 +319,15 @@ class TitleState extends MusicBeatState
 		//logoBl.shader = swagShader.shader;
 
 		titleText = new FlxSprite(titleJSON.startx, titleJSON.starty);
-		#if (desktop && MODS_ALLOWED)
-		var path = "mods/" + Paths.currentModDirectory + "/images/titleEnter.png";
+		#if MODS_ALLOWED
+		var path = Main.getDataPath() + "mods/" + Paths.currentModDirectory + "/images/titleEnter.png";
 		//trace(path, FileSystem.exists(path));
 		if (!FileSystem.exists(path)){
-			path = "mods/images/titleEnter.png";
+			path = Main.getDataPath() + "mods/images/titleEnter.png";
 		}
 		//trace(path, FileSystem.exists(path));
 		if (!FileSystem.exists(path)){
-			path = "assets/images/titleEnter.png";
+			path = Main.getDataPath() + "assets/images/titleEnter.png";
 		}
 		//trace(path, FileSystem.exists(path));
 		titleText.frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile(path),File.getContent(StringTools.replace(path,".png",".xml")));
@@ -406,15 +402,11 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-                #if android
-		FlxG.android.preventDefaultKeys = [BACK];
-		#end
-
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
 		// FlxG.watch.addQuick('amp', FlxG.sound.music.amplitude);
 
-		if (FlxG.keys.justPressed.F && ClientPrefs.screenScaleMode != "ADAPTIVE")
+		if (FlxG.keys.justPressed.F)
 		{
 			FlxG.fullscreen = !FlxG.fullscreen;
 		}
@@ -608,12 +600,12 @@ class TitleState extends MusicBeatState
 				// credTextShit.screenCenter();
 				case 5:
 					#if PSYCH_WATERMARKS
-					createCoolText(['Extra keys mod', 'by'], -40);
+					createCoolText(['Not associated', 'with'], -40);
 					#else
 					createCoolText(['In association', 'with'], -40);
 					#end
 				case 7:
-					addMoreText('tposejank', -40);
+					addMoreText('newgrounds', -40);
 					ngSpr.visible = true;
 				// credTextShit.text += '\nNewgrounds';
 				case 8:
@@ -650,14 +642,7 @@ class TitleState extends MusicBeatState
 	}
 
 	var skippedIntro:Bool = false;
-	override public function fixAspectRatio() 
-	{
-		super.fixAspectRatio();
-		
-		#if ACHIEVEMENTS_ALLOWED
-		Achievements.loadAchievements();
-		#end
-	}
+
 	function skipIntro():Void
 	{
 		if (!skippedIntro)
@@ -670,3 +655,4 @@ class TitleState extends MusicBeatState
 		}
 	}
 }
+
