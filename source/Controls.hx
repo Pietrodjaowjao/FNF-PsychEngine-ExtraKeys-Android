@@ -368,6 +368,7 @@ public function new(name, scheme = None)
 	#end
 
 	#if android
+
 	public var trackedinputsUI:Array<FlxActionInput> = [];
 	public var trackedinputsNOTES:Array<FlxActionInput> = [];	
 
