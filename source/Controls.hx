@@ -375,20 +375,20 @@ public function new(name, scheme = None)
 	public function setHitBoxNOTES(hitbox:Hitbox) 
 switch(Type){
 	case ONE:
-		inline forEachBound(Control.N4, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.NOTE_ONE1, (action, state) -> addbutton(action, hitbox.k1, state));
 	case TWO:
-		inline forEachBound(Control.LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
-		inline forEachBound(Control.RIGHT, (action, state) -> addbutton(action, hitbox.k2, state));
+		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbutton(action, hitbox.k2, state));
 	case THREE:
-		inline forEachBound(Control.LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
-		inline forEachBound(Control.N4, (action, state) -> addbutton(action, hitbox.k2, state));
-		inline forEachBound(Control.RIGHT, (action, state) -> addbutton(action, hitbox.k3, state));					
+		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.NOTE_ONE1, (action, state) -> addbutton(action, hitbox.k2, state));
+		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbutton(action, hitbox.k3, state));					
 	case FIVE:
-		inline forEachBound(Control.UP, (action, state) -> addbutton(action, hitbox.k4, state));
-		inline forEachBound(Control.DOWN, (action, state) -> addbutton(action, hitbox.k2, state));
-		inline forEachBound(Control.N4, (action, state) -> addbutton(action, hitbox.k3, state));
-		inline forEachBound(Control.LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
-		inline forEachBound(Control.RIGHT, (action, state) -> addbutton(action, hitbox.k5, state));
+		inline forEachBound(Control.NOTE_UP, (action, state) -> addbutton(action, hitbox.k4, state));
+		inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbutton(action, hitbox.k2, state));
+		inline forEachBound(Control.NOTE_ONE1, (action, state) -> addbutton(action, hitbox.k3, state));
+		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbutton(action, hitbox.k5, state));
 	case SIX:
 		inline forEachBound(Control.L1, (action, state) -> addbutton(action, hitbox.k1, state));
 		inline forEachBound(Control.U1, (action, state) -> addbutton(action, hitbox.k2, state));
@@ -424,11 +424,12 @@ switch(Type){
 		inline forEachBound(Control.N7, (action, state) -> addbutton(action, hitbox.k8, state));
 		inline forEachBound(Control.N8, (action, state) -> addbutton(action, hitbox.k9, state));											
 	case DEFAULT:	
-		inline forEachBound(Control.UP, (action, state) -> addbutton(action, hitbox.k3, state));
-		inline forEachBound(Control.DOWN, (action, state) -> addbutton(action, hitbox.k2, state));
-		inline forEachBound(Control.LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
-		inline forEachBound(Control.RIGHT, (action, state) -> addbutton(action, hitbox.k4, state));	
+		inline forEachBound(Control.NOTE_UP, (action, state) -> addbutton(action, hitbox.k3, state));
+		inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbutton(action, hitbox.k2, state));
+		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
+		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbutton(action, hitbox.k4, state));	
 	}
+	#end
 
 	override function update()
 	{
