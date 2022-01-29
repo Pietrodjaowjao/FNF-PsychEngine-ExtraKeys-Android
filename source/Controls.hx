@@ -428,7 +428,6 @@ switch(Type){
 		inline forEachBound(Control.LEFT, (action, state) -> addbutton(action, hitbox.k1, state));
 		inline forEachBound(Control.RIGHT, (action, state) -> addbutton(action, hitbox.k4, state));	
 	}
-	}
 
 	override function update()
 	{
