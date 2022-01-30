@@ -404,10 +404,10 @@ class Controls extends FlxActionSet
 
 	switch(Type){
        case ONE:
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state))
+		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
        case TWO:
 		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state))
+		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
        case THREE:
 		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
 		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
@@ -571,10 +571,10 @@ class Controls extends FlxActionSet
 
 	switch(Type){
        case ONE:
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state))
+		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
        case TWO:
 		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state))
+		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
        case THREE:
 		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
 		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
