@@ -362,4 +362,3 @@ class BaseOptionsMenu extends MusicBeatSubstate
 		}
 	}
 }
-

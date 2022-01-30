@@ -34,6 +34,13 @@ class ControlsSubState extends MusicBeatSubstate {
 	private static var defaultKey:String = 'Reset to Default Keys';
 	private var bindLength:Int = 0;
 
+class ControlsSubState extends MusicBeatSubstate {
+	private static var curSelected:Int = -1;
+	private static var curAlt:Bool = false;
+
+	private static var defaultKey:String = 'Reset to Default Keys';
+	private var bindLength:Int = 0;
+
 	var optionShit:Array<Dynamic> = [
 		['NOTES'],
 		[''],
@@ -198,6 +205,10 @@ class ControlsSubState extends MusicBeatSubstate {
 			}
 		}
 		changeSelection();
+
+                #if android
+		addVirtualPad(FULL, A_B);
+		#end
 	}
 
 	var leaving:Bool = false;
@@ -216,7 +227,11 @@ class ControlsSubState extends MusicBeatSubstate {
 
 			if (controls.BACK) {
 				ClientPrefs.reloadControls();
-				close();
+				#if android
+			MusicBeatState.resetState();
+			#else
+			close();
+			#end
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 			}
 

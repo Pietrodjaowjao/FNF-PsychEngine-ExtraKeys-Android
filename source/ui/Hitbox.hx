@@ -282,3 +282,4 @@ enum HitboxType {
 
 /*if (widghtScreen == null)
 widghtScreen = FlxG.width;*/
+

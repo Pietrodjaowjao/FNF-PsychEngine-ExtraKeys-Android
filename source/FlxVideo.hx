@@ -45,7 +45,6 @@ class FlxVideo extends FlxBasic {
 			}
 		});
 		netStream.play(name);
-
 		#elseif desktop
 		// by Polybius, check out PolyEngine! https://github.com/polybiusproxy/PolyEngine
 

@@ -116,9 +116,9 @@ class CoolUtil
 
 	//uhhhh does this even work at all? i'm starting to doubt
 	public static function precacheSound(sound:String, ?library:String = null):Void {
-		var EmbeddedSound = Paths.sound(sound, library);
-		if (Assets.exists(EmbeddedSound, SOUND) || Assets.exists(EmbeddedSound, MUSIC))
-			Assets.getSound(EmbeddedSound, true);
+		if(!Assets.cache.hasSound(Paths.sound(sound, library))) {
+			FlxG.sound.cache(Paths.sound(sound, library));
+		}
 	}
 
 	public static function browserLoad(site:String) {
@@ -128,9 +128,4 @@ class CoolUtil
 		FlxG.openURL(site);
 		#end
 	}
-
-	public static function camLerpShit(daLerp:Float)
-		{
-		  	return (FlxG.elapsed / 0.016666666666666666) * daLerp;
-		}
 }

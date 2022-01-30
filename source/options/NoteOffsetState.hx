@@ -23,6 +23,7 @@ class NoteOffsetState extends MusicBeatState
 
 	public var camHUD:FlxCamera;
 	public var camGame:FlxCamera;
+        public var camControls:FlxCamera;
 	public var camOther:FlxCamera;
 
 	var coolText:FlxText;
@@ -46,12 +47,15 @@ class NoteOffsetState extends MusicBeatState
 		// Cameras
 		camGame = new FlxCamera();
 		camHUD = new FlxCamera();
+                camControls = new FlxCamera();
 		camOther = new FlxCamera();
 		camHUD.bgColor.alpha = 0;
+                camControls.bgColor.alpha = 0;
 		camOther.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD);
+                FlxG.cameras.add(camControls);
 		FlxG.cameras.add(camOther);
 
 		FlxCamera.defaultCameras = [camGame];
@@ -196,6 +200,11 @@ class NoteOffsetState extends MusicBeatState
 		Conductor.changeBPM(128.0);
 		FlxG.sound.playMusic(Paths.music('offsetSong'), 1, true);
 
+                #if android
+		addVirtualPad(FULL, A_B_C);
+                _virtualpad.cameras = [camControls];
+                #end
+
 		super.create();
 	}
 
@@ -295,7 +304,7 @@ class NoteOffsetState extends MusicBeatState
 				}
 			}
 
-			if(controls.RESET)
+			if(controls.RESET#if android || _virtualpad.buttonC.justPressed #end)
 			{
 				for (i in 0...ClientPrefs.comboOffset.length)
 				{

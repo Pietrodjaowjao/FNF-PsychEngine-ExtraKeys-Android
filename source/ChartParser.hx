@@ -78,3 +78,4 @@ class ChartParser
 		return dopeArray;
 	}
 }
+

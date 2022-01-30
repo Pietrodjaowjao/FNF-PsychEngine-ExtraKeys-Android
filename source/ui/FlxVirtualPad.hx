@@ -204,3 +204,4 @@ enum FlxActionMode
 	A_B_X_Y;
 }
 
+
