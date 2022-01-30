@@ -52,9 +52,8 @@ import StageData;
 import FunkinLua;
 import DialogueBoxPsych;
 import lime.app.Application;
-#if android
 import ui.Mobilecontrols;
-#end
+import ui.Hitbox;
 
 #if sys
 import sys.FileSystem;
@@ -4078,7 +4077,7 @@ private function keysArePressed():Bool
 			}
 		}
 	}
-
+}
 	public function spawnNoteSplash(x:Float, y:Float, data:Int, ?note:Note = null) {
 		var skin:String = 'noteSplashes';
 		if(PlayState.SONG.splashSkin != null && PlayState.SONG.splashSkin.length > 0) skin = PlayState.SONG.splashSkin;
