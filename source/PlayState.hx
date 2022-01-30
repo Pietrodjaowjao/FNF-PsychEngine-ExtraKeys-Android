@@ -55,7 +55,6 @@ import lime.app.Application;
 
 #if android
 import ui.Mobilecontrols;
-import ui.Hitbox;
 #end
 
 #if sys
