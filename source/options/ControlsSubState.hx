@@ -34,14 +34,7 @@ class ControlsSubState extends MusicBeatSubstate {
 	private static var defaultKey:String = 'Reset to Default Keys';
 	private var bindLength:Int = 0;
 
-class ControlsSubState extends MusicBeatSubstate {
-	private static var curSelected:Int = -1;
-	private static var curAlt:Bool = false;
-
-	private static var defaultKey:String = 'Reset to Default Keys';
-	private var bindLength:Int = 0;
-
-	var optionShit:Array<Dynamic> = [
+var optionShit:Array<Dynamic> = [
 		['NOTES'],
 		[''],
 		['1 KEY'],
