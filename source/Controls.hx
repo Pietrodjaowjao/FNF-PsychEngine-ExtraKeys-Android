@@ -398,6 +398,7 @@ class Controls extends FlxActionSet
 	}
 	
 	public function setHitBoxNOTES(hitbox:Hitbox) 
+	{
 	if (Type == null)
 		Type = DEFAULT;
 
