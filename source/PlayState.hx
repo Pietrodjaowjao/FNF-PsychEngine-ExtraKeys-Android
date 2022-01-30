@@ -54,7 +54,8 @@ import DialogueBoxPsych;
 import lime.app.Application;
 
 #if android
-import ui.Mobilecontrols;
+import ui.Hitbox;
+import ui.FlxVirtualPad;
 #end
 
 #if sys
