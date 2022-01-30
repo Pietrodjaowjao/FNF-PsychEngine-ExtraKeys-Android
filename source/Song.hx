@@ -27,6 +27,8 @@ typedef SwagSong =
 	var gfVersion:String;
 	var stage:String;
 
+	var mania:Int;
+
 	var arrowSkin:String;
 	var splashSkin:String;
 	var validScore:Bool;
@@ -80,6 +82,12 @@ class Song
 				}
 			}
 		}
+
+                /*
+                if (songJson.mania == null) //yall better not replace this
+                {
+                        songJson.mania = Note.defaultMania;
+                }*/
 	}
 
 	public function new(song, notes, bpm)
@@ -104,7 +112,7 @@ class Song
 
 		if(rawJson == null) {
 			#if sys
-			rawJson = File.getContent(Main.getDataPath() + Paths.json(formattedFolder + '/' + formattedSong)).trim();
+			rawJson = File.getContent(Paths.json(formattedFolder + '/' + formattedSong)).trim();
 			#else
 			rawJson = Assets.getText(Paths.json(formattedFolder + '/' + formattedSong)).trim();
 			#end
@@ -145,3 +153,4 @@ class Song
 		return swagShit;
 	}
 }
+
