@@ -1081,10 +1081,10 @@ class PlayState extends MusicBeatState
 				curcontrol = DEFAULT;
 		}
 		_hitbox = new Hitbox(curcontrol);
-		controls.setHitBox(_hitbox, curcontrol);
+		controls.setHitBoxUI(_hitbox, curcontrol);
 
-		trackedinputs = controls.trackedinputs;
-		controls.trackedinputs = [];
+		trackedinputsUI = controls.trackedinputsUI;
+		controls.trackedinputsUI = [];
 
 		var camcontrol = new FlxCamera();
 		FlxG.cameras.add(camcontrol);
@@ -3284,9 +3284,6 @@ class PlayState extends MusicBeatState
 
 			deathCounter = 0;
 		seenCutscene = false;
-                #if android
-		mcontrols.visible = false;
-		#end
 
 		#if ACHIEVEMENTS_ALLOWED
 		if(achievementObj != null) {

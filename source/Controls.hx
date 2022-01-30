@@ -397,7 +397,7 @@ class Controls extends FlxActionSet
 		action.add(input);
 	}
 	
-	public function setHitBoxNOTES(hitbox:Hitbox) 
+	public function setHitBoxNOTES(hitbox:Hitbox, ?Type:HitboxType) 
 	{
 	if (Type == null)
 		Type = DEFAULT;
@@ -475,7 +475,7 @@ class Controls extends FlxActionSet
 		action.add(input);
 	}
 	
-	public function setHitBoxUI(hitbox:Hitbox) 
+	public function setHitBoxUI(hitbox:Hitbox, ?Type:HitboxType) 
 	{
 	if (Type == null)
 		Type = DEFAULT;
