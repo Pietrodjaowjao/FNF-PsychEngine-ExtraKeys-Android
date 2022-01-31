@@ -405,94 +405,88 @@ class Controls extends FlxActionSet
 
 	switch(Type){
        case ONE:
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
        case TWO:
 		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
 		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
        case THREE:
 		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
 		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
        case FIVE:
 		inline forEachBound(Control.NOTE_UP, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
 		inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-       case FIVE:
-		inline forEachBound(Control.NOTE_UP, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
 		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
 		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
        case SIX:
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
        case SEVEN:
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
        case EIGHT:
-		inline forEachBound(KeyboardEvent.KEY_A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
 
-		inline forEachBound(KeyboardEvent.KEY_H, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
+		inline forEachBound(FlxG.keys.justPressed.H, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
        case NINE:
-		inline forEachBound(KeyboardEvent.KEY_A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_H, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
+		inline forEachBound(FlxG.keys.justPressed.A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed._H, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
        case NINE:
-		inline forEachBound(KeyboardEvent.KEY_A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_H, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
+		inline forEachBound(FlxG.keys.justPressed.A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed.H, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
        case TEN:
-		inline forEachBound(KeyboardEvent.KEY_A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(KeyboardEvent.KEY_G, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
-		inline forEachBound(KeyboardEvent.KEY_H, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k10, state));
+		inline forEachBound(FlxG.keys.justPressed.A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.G, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.H, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k10, state));
        case ELEVEN:
-		inline forEachBound(KeyboardEvent.KEY_A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(KeyboardEvent.KEY_G, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
-		inline forEachBound(KeyboardEvent.KEY_H, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k10, state));
-		inline forEachBound(KeyboardEvent.KEY_PERIOD, (action, state) -> addbuttonuNOTES(action, hitbox.k11, state));
+		inline forEachBound(FlxG.keys.justPressed.A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.G, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.H, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k10, state));
+		inline forEachBound(FlxG.keys.justPressed.PERIOD, (action, state) -> addbuttonuNOTES(action, hitbox.k11, state));
 	case DEFAULT:
 		inline forEachBound(Control.NOTE_UP, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
 		inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
@@ -572,94 +566,88 @@ class Controls extends FlxActionSet
 
 	switch(Type){
        case ONE:
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
        case TWO:
 		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
 		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
        case THREE:
 		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
 		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
        case FIVE:
 		inline forEachBound(Control.NOTE_UP, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
 		inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-       case FIVE:
-		inline forEachBound(Control.NOTE_UP, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
 		inline forEachBound(Control.NOTE_LEFT, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
 		inline forEachBound(Control.NOTE_RIGHT, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
        case SIX:
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
        case SEVEN:
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
        case EIGHT:
-		inline forEachBound(KeyboardEvent.KEY_A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
 
-		inline forEachBound(KeyboardEvent.KEY_H, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
+		inline forEachBound(FlxG.keys.justPressed.H, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
        case NINE:
-		inline forEachBound(KeyboardEvent.KEY_A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_H, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
+		inline forEachBound(FlxG.keys.justPressed.A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed._H, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
        case NINE:
-		inline forEachBound(KeyboardEvent.KEY_A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_H, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
+		inline forEachBound(FlxG.keys.justPressed.A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed.H, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
        case TEN:
-		inline forEachBound(KeyboardEvent.KEY_A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(KeyboardEvent.KEY_G, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
-		inline forEachBound(KeyboardEvent.KEY_H, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k10, state));
+		inline forEachBound(FlxG.keys.justPressed.A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.G, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.H, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k10, state));
        case ELEVEN:
-		inline forEachBound(KeyboardEvent.KEY_A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
-		inline forEachBound(KeyboardEvent.KEY_S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
-		inline forEachBound(KeyboardEvent.KEY_D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
-		inline forEachBound(KeyboardEvent.KEY_F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
-		inline forEachBound(KeyboardEvent.KEY_G, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
-		inline forEachBound(KeyboardEvent.KEY_SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
-		inline forEachBound(KeyboardEvent.KEY_H, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
-		inline forEachBound(KeyboardEvent.KEY_J, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
-		inline forEachBound(KeyboardEvent.KEY_K, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
-		inline forEachBound(KeyboardEvent.KEY_L, (action, state) -> addbuttonuNOTES(action, hitbox.k10, state));
-		inline forEachBound(KeyboardEvent.KEY_PERIOD, (action, state) -> addbuttonuNOTES(action, hitbox.k11, state));
+		inline forEachBound(FlxG.keys.justPressed.A, (action, state) -> addbuttonuNOTES(action, hitbox.k1, state));
+		inline forEachBound(FlxG.keys.justPressed.S, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
+		inline forEachBound(FlxG.keys.justPressed.D, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
+		inline forEachBound(FlxG.keys.justPressed.F, (action, state) -> addbuttonuNOTES(action, hitbox.k4, state));
+		inline forEachBound(FlxG.keys.justPressed.G, (action, state) -> addbuttonuNOTES(action, hitbox.k5, state));
+		inline forEachBound(FlxG.keys.justPressed.SPACE, (action, state) -> addbuttonuNOTES(action, hitbox.k6, state));
+		inline forEachBound(FlxG.keys.justPressed.H, (action, state) -> addbuttonuNOTES(action, hitbox.k7, state));
+		inline forEachBound(FlxG.keys.justPressed.J, (action, state) -> addbuttonuNOTES(action, hitbox.k8, state));
+		inline forEachBound(FlxG.keys.justPressed.K, (action, state) -> addbuttonuNOTES(action, hitbox.k9, state));
+		inline forEachBound(FlxG.keys.justPressed.L, (action, state) -> addbuttonuNOTES(action, hitbox.k10, state));
+		inline forEachBound(FlxG.keys.justPressed.PERIOD, (action, state) -> addbuttonuNOTES(action, hitbox.k11, state));
 	case DEFAULT:
 		inline forEachBound(Control.NOTE_UP, (action, state) -> addbuttonuNOTES(action, hitbox.k3, state));
 		inline forEachBound(Control.NOTE_DOWN, (action, state) -> addbuttonuNOTES(action, hitbox.k2, state));
